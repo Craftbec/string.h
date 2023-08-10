@@ -1,0 +1,35 @@
+make --dry-run --always-make --keep-going --print-directory
+make: Entering directory `/Users/craftbec/C2_s21_stringplus-4/src'
+gcc -Wextra -Werror -Wall -c s21_strerror.c
+gcc -Wextra -Werror -Wall -c s21_memset.c
+gcc -Wextra -Werror -Wall -c s21_strcat.c
+gcc -Wextra -Werror -Wall -c s21_strncat.c
+gcc -Wextra -Werror -Wall -c s21_strchr.c
+gcc -Wextra -Werror -Wall -c s21_memchr.c
+gcc -Wextra -Werror -Wall -c s21_memcmp.c
+gcc -Wextra -Werror -Wall -c s21_memcpy.c
+gcc -Wextra -Werror -Wall -c s21_strlen.c
+gcc -Wextra -Werror -Wall -c s21_memmove.c
+gcc -Wextra -Werror -Wall -c s21_strcspn.c
+gcc -Wextra -Werror -Wall -c s21_strpbrk.c
+gcc -Wextra -Werror -Wall -c s21_strcmp.c
+gcc -Wextra -Werror -Wall -c s21_strncmp.c
+gcc -Wextra -Werror -Wall -c s21_strcpy.c
+gcc -Wextra -Werror -Wall -c s21_strncpy.c
+gcc -Wextra -Werror -Wall -c s21_strrchr.c
+gcc -Wextra -Werror -Wall -c s21_strspn.c
+gcc -Wextra -Werror -Wall -c s21_strstr.c
+gcc -Wextra -Werror -Wall -c s21_strtok.c
+gcc -Wextra -Werror -Wall -c s21_insert.c
+gcc -Wextra -Werror -Wall -c s21_trim.c
+gcc -Wextra -Werror -Wall -c s21_to_lower.c
+gcc -Wextra -Werror -Wall -c s21_to_upper.c
+gcc -Wextra -Werror -Wall -c s21_sprintf.c
+ar rcs s21_string.a s21_strerror.o s21_memset.o s21_strcat.o s21_strncat.o s21_strchr.o s21_memchr.o s21_memcmp.o s21_memcpy.o s21_strlen.o s21_memmove.o s21_strcspn.o s21_strpbrk.o s21_strcmp.o s21_strncmp.o s21_strcpy.o s21_strncpy.o s21_strrchr.o s21_strspn.o s21_strstr.o s21_strtok.o s21_insert.o s21_trim.o s21_to_lower.o s21_to_upper.o s21_sprintf.o 
+gcc -Wextra -Werror -Wall -lgcov -coverage string_test.c s21_strerror.c s21_memset.c s21_strcat.c s21_strncat.c s21_strchr.c s21_memchr.c s21_memcmp.c s21_memcpy.c s21_strlen.c s21_memmove.c s21_strcspn.c s21_strpbrk.c s21_strcmp.c s21_strncmp.c s21_strcpy.c s21_strncpy.c  s21_strrchr.c s21_strspn.c s21_strstr.c s21_strtok.c s21_insert.c s21_trim.c s21_to_lower.c s21_to_upper.c s21_sprintf.c -lcheck -lm -lpthread -o test
+./test
+lcov -t "test" -o test.info -c -d .
+genhtml -o test_output test.info
+cd ./test_output ; open index.html
+make: Leaving directory `/Users/craftbec/C2_s21_stringplus-4/src'
+ 
